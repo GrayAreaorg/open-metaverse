@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <!-- <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script> -->
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+    AFRAME.registerComponent('glow', {
+  schema: {
+    color: {default: '#ffffff', type: 'color'},
+    intensity: {default: 1.0}
+  },
+  init: function () {
+    this.el.addEventListener('object3dset', function () {
+      this.update();
+    }.bind(this));
+  },
+  update: function () {
+    var data = this.data;
+    this.el.object3D.traverse(function (node) {
+      if (node.isMesh) {
+        node.material.emissive.copy(new THREE.Color(data.color));
+        node.material.emissiveIntensity = data.intensity;
+      }
+    });
+  }
+});</script>
+    <a-scene>
+        <a-assets>
+            <a-mixin id="teleport" teleport-controls="type: parabolic; cameraRig: #cameraRig; defaultPlaneSize: 1000;"></a-mixin>
+            <img id="boxTexture" src="assets/img/gypsum.jpg">
+            <img id="gndTexture" src="assets/img/grid.jpg">
+            <img id="sky" src="assets/img/env.jpg">
+            <a-asset-item id="robot" src="assets/models/robot/model.gltf">
+            <a-asset-item id="mech" src="assets/models/model.glb"></a-asset-item>
+        </a-assets>
+        <a-sky src="#sky"></a-sky>
+        
+        <a-gltf-model src="#mech" position="2.5 5.7 14.5" scale="1 1 1" animation-mixer></a-gltf-model> 
+        <a-gltf-model src="#robot" position="3 1.65 -6"></a-gltf-model> 
+
+        <a-entity id="cameraRig" position="0 0.1 0">
+                <a-entity camera wasd-controls look-controls></a-entity>
+                <a-entity id="rightHand" mixin="teleport" laser-controls="hand: right" oculus-go-controls="hand: right"></a-entity>
+            </a-entity>
+    
+        <a-box src="#boxTexture" glow="color: #33FF66; intensity: .5" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+            repeat="indefinite">
+        </a-animation>
+
+        
+
+    </a-animation>
+        </a-box>
+
+        <!-- <a-entity environment="preset: tron"></a-entity> -->
+        <a-plane src="#gndTexture" repeat="1000 1000" position="0 0 -4" scale="500 500 0.00001" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        
+    </a-scene>
+</body>
+</html>

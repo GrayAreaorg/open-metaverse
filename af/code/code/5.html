@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="my-image" src="img/hud.jpg">
+      </a-assets>
+      <a-curvedimage src="#my-image" height="10.0" radius="12" theta-length="120"
+      rotation="0 100 0" scale="0.8 0.8 0.8"></a-curvedimage>
+    </a-scene>
+  </body>
+</html>

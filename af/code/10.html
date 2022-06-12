@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello, WebVR! • A-Frame</title>
+  <meta name="description" content="Hello, WebVR! • A-Frame">
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color: #E31C1C">
+    <a-sphere position="-4 1 -5" scale=".5 .5 .5" radius="1.25" color="#32CD32" metalness="0" wireframe="false" animation="property: position; from:-4 -2 -5 ; to: -4 4 -5; loop: true; dur: 3000; dir: alternate; easing: easeInSine">
+    </a-sphere>
+    <a-torus-knot position="-2 1 -5" scale="0.5 0.5 0.5" p="5" radius="1.25" color="#229F6E" metalness="0" wireframe="false" animation="property: segments-tubular; from:30 ; to: 100; loop: true; dur: 3000; dir: alternate; easing: easeInSine"></a-torus-knot>
+    <a-sphere position="0 1 -5" scale=".5 .5 .5" radius="1.25" color="#D41252" metalness=".5"
+      wireframe="false" segments-height="4" segments-height="4" animation="property: color; from:#C70000 ; to: #1C55C6; loop: true; dur: 3000; dir: alternate; easing: easeInSine"></a-sphere>
+    
+      <a-sphere position="2 1 -5" scale=".5 .5 .5" radius="1.25" color="#1C55C6" metalness=".75" wireframe="false" segments-height="6" segments-height="6" animation="property: radius; from:1 ; to: 3; loop: true; dur: 3000; dir: alternate; easing: easeInSine">  
+      </a-sphere>
+    
+    <a-sphere position="4 1 -5" scale=".5 .5 .5" radius="1.25" color="#1C55C6" metalness="1" wireframe="true"
+      segments-height="8" animation="property: segments-height; from:2 ; to: 24; loop: true; dur: 3000; dir: alternate; easing: easeInSine"></a-sphere>
+  </a-scene>
+</body>
+
+</html>
