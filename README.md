@@ -6,7 +6,7 @@ Gray Area Open Metaverse Educational Info
 
 **Discord: https://discord.gg/dtSsH7Zc**
 
-[Presentation] (https://docs.google.com/presentation/d/e/2PACX-1vSBc08aiivEH8pNMMl_YB_EvzZY3wNxqeKkRnU7HJEbTtrNPLxn72b-JvvHSpRx7fjUvRGideSn_24z/pub?start=false&loop=false&delayms=3000)
+[Presentation](https://docs.google.com/presentation/d/e/2PACX-1vSBc08aiivEH8pNMMl_YB_EvzZY3wNxqeKkRnU7HJEbTtrNPLxn72b-JvvHSpRx7fjUvRGideSn_24z/pub?start=false&loop=false&delayms=3000)
 
 ## Schedule
 * 10 AM
