@@ -6,6 +6,7 @@ Gray Area Open Metaverse Educational Info
 
 **Discord: https://discord.gg/dtSsH7Zc**
 
+##Schedule
 * 10 AM
 Opening remarks + Logistics
 * 10:30 AM
