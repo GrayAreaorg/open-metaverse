@@ -1,5 +1,6 @@
 # open-metaverse
 Gray Area Open Metaverse Educational Info
+
 ![qr](https://user-images.githubusercontent.com/5863550/174152270-c4df03af-5760-439b-a93a-d7d393fb9d07.jpg)
 
 **URL To Github: https://qrco.de/openmeta**
