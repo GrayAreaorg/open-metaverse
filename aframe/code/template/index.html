@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <!-- import aframe library -->
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+
+    <!-- import teleport library -->
+    <script
+        src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            const click = document.getElementById('click');
+            // Have to initialize via a user event
+            document.addEventListener('click', () => {
+                click.parentNode && click.parentNode.removeChild(click);
+            });
+        });
+
+    </script>
+
+    <!-- styling for the click to start button -->
+    <style>
+        #click {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+
+            text-shadow: 0 1px 0 #FFF;
+            background: rgba(255, 255, 255, 0.75);
+            color: #000;
+            padding: 0.5em 1em;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- click to start text -->
+    <div id="click">Click to start experience</div>
+    <!-- start a-frame scene -->
+    <a-scene>
+
+        <!-- import assets into a-assets -->
+        <a-assets>
+            <a-mixin id="teleport"
+                teleport-controls="type: parabolic; button: trigger; cameraRig: #cameraRig; defaultPlaneSize: 1000; ">
+            </a-mixin>
+            <img id="boxTexture" src="assets/img/gypsum.jpg">
+            <img id="gndTexture" src="assets/img/grid.jpg">
+            <img id="sky" src="assets/img/env.jpg">
+            <audio id="metal" preload="auto" crossorigin="anonymous" src="assets/snd/soundin.wav"></audio>
+        </a-assets>
+
+        <!-- create a skybox https://aframe.io/docs/1.0.0/primitives/a-sky.html-->
+        <a-sky src="#sky"></a-sky>
+
+        <!-- add items to scene -->
+
+        <a-sphere position="0 2 -.5" radius="2" color="#EF2D5E"
+            material="color:#eee; sphericalEnvMap:#sky;metalness:1;roughness:0;side:double;" animation__rotation="property: rotation; dir: alternate; dur: 10000;
+                                  easing: easeInSine; loop: true; to: 0 360 0" animation__position="property: position; dir: alternate; dur: 10000;
+                                  easing: easeInSine; loop: true; from: 0 2 0; to: 0 2 -15" animation__segmentw="property: segments-width; dir: alternate; dur: 1000;
+                                  easing: easeInSine; loop: true; from: 2; to: 36" animation__segmenth="property: segments-height; dir: alternate; dur: 1000;
+                                  easing: easeInSine; loop: true; from: 2; to: 18">
+
+            <!-- add sound inside sphere -->
+            <a-sound src="#metal" autoplay="true" loop="true" volume="1"></a-sound>
+
+        </a-sphere>
+
+        <!-- uncomment below for animated outer shell -->
+
+        <!-- <a-sphere position="0 .2 -.5" scale="0.4 0.4 0.4" radius=".3" color="#EF2D5E" wireframe="true" wireframe-linewidth="2"
+        animation__color="property: material.color; dir: alternate; dur: 3000;
+                                  easing: easeInSine; loop: true; to: #FFF"
+        animation__segmentw="property: segments-width; dir: alternate; dur: 3000;
+                                  easing: easeInSine; loop: true; from: 8; to: 36"
+        animation__segmenth="property: segments-height; dir: alternate; dur: 3000;
+                                  easing: easeInSine; loop: true; from: 8; to: 18">
+        </a-sphere> -->
+
+
+        <a-plane src="#gndTexture" repeat="1000 1000" position="0 0 -4" scale="500 500 0.00001" rotation="-90 0 0"
+            width="4" height="4" color="#7BC8A4"></a-plane>
+
+        <!-- camera with teleport controls -->
+        <a-entity id="cameraRig" position="0 0.1 0">
+            <a-entity camera wasd-controls look-controls></a-entity>
+            <a-entity id="rightHand" mixin="teleport" laser-controls="hand: right" vive-controls="hand: right"
+                oculus-go-controls="hand: right"></a-entity>
+            <a-entity id="leftHand" mixin="teleport" laser-controls="hand: left" vive-controls="hand: left"
+                oculus-go-controls="hand: left"></a-entity>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <a-mixin id="teleport" teleport-controls="type: parabolic; cameraRig: #cameraRig; defaultPlaneSize: 1000;">
+      </a-mixin>
+
+      <a-asset-item id="stand" src="assets/models/Stand_out/Stand.gltf" position="0 -1 0"></a-asset-item>
+      <!-- <audio id="magic" src="assets/sound/magic.mp3" preload="auto"></audio> -->
+    </a-assets>
+
+    <!-- create default environment -->
+    <a-entity environment="preset: forest"></a-entity>
+
+    <!-- <a-sound src="assets/sound/magic.mp3" autoplay="true"></a-sound> -->
+
+    <a-entity light="type: point; intensity: 1; distance: 50; decay: 2" position="0 3 -2"></a-entity>
+
+    <a-gltf-model src="#stand" scale="1 1 1" position="0 0 -3" animation-mixer>
+      <!-- try putting the sound here -->
+    </a-gltf-model>
+  </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Basic Interactions - A-Frame</title>
+    <meta name="description" content="Interactions - A-Frame">
+    <script src="js/aframe-master.min.js"></script>
+    <script src="js/aframe-event-set-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="gndTexture" src="assets/img/grid.jpg">
+        </a-assets>
+
+        <a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#F44336" event-set__enter="_event: mouseenter; _target: #bg; color: #F44336"
+            sound="src: assets/sound/sound9.mp3; on: mouseenter">
+            <a-animation attribute="scale" begin="mouseenter " dur="300 " to="2.3 2.3 2.3 "></a-animation>
+            <a-animation attribute="scale" begin="mouseleave " dur="300 " to="0.9 0.9 0.9 "></a-animation>
+        </a-box>
+        <a-box position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#2196F3 " event-set__enter="_event:
+            mouseenter; _target: #bg; color: #2196F3" sound="src: assets/sound/sound20.mp3; on: mouseenter">
+            <a-animation attribute="scale" begin="mouseenter " dur="300 " to="2.3 2.3 2.3 "></a-animation>
+            <a-animation attribute="scale" begin="mouseleave " dur="300 " to="0.9 0.9 0.9 "></a-animation>
+        </a-box>
+        <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#009688 " event-set__enter="_event:
+            mouseenter; _target: #bg; color: #009688" sound="src: assets/sound/sound24.mp3; on: mouseenter">
+            <a-animation attribute="scale" begin="mouseenter " dur="300 " to="2.3 2.3 2.3 "></a-animation>
+            <a-animation attribute="scale" begin="mouseleave " dur="300 " to="0.9 0.9 0.9 "></a-animation>
+        </a-box>
+        <a-box position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#E91E63 " event-set__enter="_event: mouseenter;
+            _target: #bg; color: #E91E63" sound="src: assets/sound/sound27.mp3; on: mouseenter">
+            <a-animation attribute="scale" begin="mouseenter " dur="300 " to="2.3 2.3 2.3 "></a-animation>
+            <a-animation attribute="scale" begin="mouseleave " dur="300 " to="0.9 0.9 0.9 "></a-animation>
+        </a-box>
+
+        <a-entity laser-controls="hand: left "></a-entity>
+        <a-entity laser-controls="hand: right "></a-entity>
+
+        <a-sky id="bg " color="#fff "></a-sky>
+
+        <a-plane src="#gndTexture " rotation="-90 0 0 " width="50 " height="50 "></a-plane>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>

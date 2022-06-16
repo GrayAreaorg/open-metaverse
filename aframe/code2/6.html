@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <a-asset-item id="si-obj" src="assets/models/si/space_invader.obj"></a-asset-item>
+      <a-asset-item id="si-mtl" src="assets/models/si/space_invader.mtl"></a-asset-item>
+      <a-asset-item id="si-obj2" src="assets/models/si/space_invader2.obj"></a-asset-item>
+      <a-asset-item id="si-mtl2" src="assets/models/si/space_invader2.mtl"></a-asset-item>
+      <a-asset-item id="si-obj3" src="assets/models/si/space_invader3.obj"></a-asset-item>
+      <a-asset-item id="si-mtl3" src="assets/models/si/space_invader3.mtl"></a-asset-item>
+    </a-assets>
+    <a-entity environment="preset: tron"></a-entity>
+
+    <a-entity obj-model="obj: #si-obj; mtl: #si-mtl" position="-4 1 -5" scale=".25 .25 .25"
+      animation__rot="property: position; from:-4 4 -5; to: -4 1 -5; loop: true; dur: 3000; dir: alternate; easing: easeInSine">
+    </a-entity>
+
+      <a-entity environment="preset: forest">
+      </a-entity>
+
+      <!-- a-sphere postioned at "3 1.25 -5" with no parent -->
+      <a-sphere position="3 1.25 -5" radius="1.25" color="blue"></a-sphere>
+
+
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E">
+        <!-- a-sphere postioned at "0 1 1" parented from the first sphere -->
+        <a-sphere position="0 1 1" radius="1.25" color="#EF2D5E"></a-sphere>
+      </a-sphere>
+
+      <a-entity obj-model="obj: #si-obj2; mtl: #si-mtl2" position="0 1 -5" scale=".25 .25 .25"
+        animation__rot="property: position; from:0 1 -5; to: 0 4 -5; loop: true; dur: 3000; dir: alternate; easing: easeInSine">
+      </a-entity>
+
+      <a-entity obj-model="obj: #si-obj3; mtl: #si-mtl" position="4 1 -5" scale=".25 .25 .25"
+        animation__rot="property: position; from:4 4 -5; to: 4 1 -5; loop: true; dur: 3000; dir: alternate; easing: easeInSine">
+      </a-entity>
+
+        <a-entity id=" cameraRig " position="0 0.1 0 ">
+            <a-entity camera wasd-controls look-controls></a-entity>
+            <a-entity id="rightHand " mixin="teleport " laser-controls="hand: right " oculus-go-controls="hand: right "></a-entity>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>

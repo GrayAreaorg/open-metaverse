@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Extended Reality and Immersive Worlds(XR) Week
+        1</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="100px" data-background-transition="zoom">
+                <figure>
+                    <h2 class="intro">Aframe</h2 class="intro">
+                    <h2 class="intro">Aframe</h2 class="intro">
+                    <h2 class="intro">Aframe</h2 class="intro">
+                    <h2 class="intro">Aframe</h2 class="intro">
+                </figure>
+            </section>
+            <section>
+                WebXR project are built using web technologies...
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="80px" data-background-transition="zoom">
+                <p>Platforms and Building Blocks</p>
+            </section>
+            <section>
+                <h1>WebGL</h1><br>
+                <p>WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 2D and 3D graphics within
+                    any compatible web browser without the use of plug-ins. WebGL is fully integrated with other web
+                    standards, allowing GPU-accelerated usage of physics and image processing and effects as part of the
+                    web page canvas. WebGL became a standard in modern bowsers in 2011</p>
+            </section>
+            <section>
+                <a href="http://madebyevan.com/webgl-water">WebGL water example</a>
+            </section>
+            <section>
+                <p>WebGL is great, but rather involved to program so we have helper libraries, such as ...</p>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="80px" data-background-transition="zoom">
+                <img src="img/three.png" height="600"><br>
+                <a href="https://threejs.org/examples/">Three.js</a>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="80px" data-background-transition="zoom">
+                <img src="img/babylon.jpg" height="500"><br>
+                <a href="https://www.babylonjs.com/">BabylonJS</a><br>
+                <a href="https://doc.babylonjs.com/how_to/webvr_helper">BabylonJS VR Helper</a>
+            </section>
+            <section>
+                <p>Three.js and Babylon started as 3d in the browser libraries and added VR features later. But we also
+                    have a VR first library built on top of Three.js...</p>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="80px" data-background-transition="zoom">
+                <img src="img/aframe.png" height="500"><br>
+                <a href="https://aframe.io/">Aframe</a>
+            </section>
+            <section>
+                <img src="img/docs.png"><br>
+                <a href="https://aframe.io/docs/1.3.0/introduction/">Aframe Docs</a><br>
+            </section>
+            
+            
+            <section>
+                <img src="img/boiler.png"><br>
+                <a href="https://github.com/AdaRoseCannon/aframe-xr-boilerplate">Aframe XR Boilerplate</a><br>
+                <p>A boiler plate project for getting started with VR and AR with AFrame</p>
+            </section>
+            <section>
+                <iframe allowvr="yes" src="https://altspacevr.github.io/aframe/examples/boilerplate/hello-world/"
+                    height="720" width="1280"></iframe>
+            </section>
+            <section>
+                <img src="img/aframebasic.png">
+            </section>
+            <section>
+                <a href="https://altspacevr.github.io/aframe/examples/">Some Examples</a>
+            </section>
+            <section>
+                <p>Visual Inspector</p>
+                <img src="img/aframeinspector.png">
+                <a href="https://github.com/aframevr/aframe-inspector">https://github.com/aframevr/aframe-inspector</a>
+            </section>
+            <section>
+                <img src="img/si.png" height="600">
+                <a href="https://3d.si.edu/">https://3d.si.edu/</a>
+            </section>
+            <section>
+                <ul>
+                    <li>Some test scenes</li>
+                    <li><a href="http://mhellar.com/af/6">http://mhellar.com/af/6</a></li>
+                    <li><a href="http://mhellar.com/af/5">http://mhellar.com/af/5</a></li>
+                    <li><a href="https://aframe.io">https://aframe.io</a></li>
+                </ul>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="90px" data-background-transition="zoom">
+                <p>Grab the code here: <a
+                        href="https://github.com/mhellar/sfaixr/blob/master/day1/code.zip?raw=true">https://github.com/mhellar/sfaixr/blob/master/day1/code.zip?raw=true</a>
+                </p>
+            </section>
+            <section>
+                <ul>
+                    <li>Lets look at Visual Studio Code</li>
+                    <li>Install live server form the plugins block</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Have Github desktop installed</li>
+                    <li><a href="https://pages.github.com/">Setup Github pages</a></li>
+                    <li>Create a new repo for storing your XR scenes and publish it to web unser the settings</li>
+                    <li>Open it in Github desktop</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Open basic.html in a text editor</li>
+                    <li>also cd into it from the terminal and type 'live-server'</li>
+                    <li>Lets look at the code really quick</li>
+                </ul>
+            </section>
+
+            <section>
+                <p>Add a primitive cube in between the scene tags</p>
+                <pre><code data-trim>
+                    <a-box color="red"></a-box>
+                    </code></pre>
+            </section>
+
+            <section>
+                <p>A-Frame uses a right-handed coordinate system. With the default camera direction: positive X-axis
+                    extends right, positive Y-axis extends up, and the positive Z-axis extends out of the screen towards
+                    us:</p>
+                <img src="img/rh.jpg">
+            </section>
+
+            <section>
+                <ul>
+                    <li>The default camera is at 0 0 0 the same as our box</li>
+                    <li>Change the position attribute of the box so it is in front of the camera</li>
+                    <li>Units are in meters</li>
+                </ul>
+                <pre><code data-trim>
+                    <a-box color="green" position="0 2 -5"></a-box>
+                    </code></pre>
+            </section>
+
+            <section>
+                <ul>
+                    <li>We just changed the <a href="https://aframe.io/docs/1.0.0/components/position.html">position</a>
+                        attribute</li>
+                    <li>Also try <a href="https://aframe.io/docs/1.0.0/components/rotation.html">rotation</a></li>
+                    <li>And <a href="https://aframe.io/docs/1.0.0/components/scale.html">scale</a></li>
+                </ul>
+                <pre><code data-trim>
+                    <a-entity id="box" geometry="primitive: box" material="color: red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-entity>
+                    </code></pre>
+            </section>
+
+            <section>
+                <ul>
+                    <li>We we can add a ground plane to give us some perspective</li>
+                </ul>
+                <pre><code data-trim>
+                    <a-plane position="0 0 -4" scale="10 10 0.00001" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+                    </code></pre>
+            </section>
+
+            <section>
+                <ul>
+                    <li>Adding an image texture to the box is easy with the src attribute</li>
+                </ul>
+                <pre><code data-trim>
+                    <a-box src="assets/img/gypsum.jpg" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+                    </code></pre>
+            </section>
+
+            <section>
+                <ul>
+                    <li>Aframe has an asset manager system</li>
+                    <li>It's better to use this, within the a-scene tags add a-asset open and closing tags</li>
+                    <li>Within the a-assets tags load an image and give it an id</li>
+                    <li>Set the src attribute of the object you want to texture to the id of the image</li>
+                </ul>
+                <pre><code data-trim>
+<a-scene>
+        <a-assets>
+            <img id="boxTexture" src="assets/img/gypsum.jpg">
+        </a-assets>
+        <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+</a-scene>
+                    </code></pre>
+            </section>
+
+
+            <section>
+                <ul>
+                    <li>Open basic.html in a text editor</li>
+                    <li>also cd into it from the terminal and type 'live-server'</li>
+                    <li>Your browser will open to http://locahost:8080</li>
+                </ul>
+            </section>
+
+            <section>
+                <ul>
+                    <li>We can navigate in this scene with the WASD controls</li>
+                    <li>Use the left mouse button for trackball control</li>
+                </ul>
+            </section>
+            <section>
+                <p>A-Frame uses a right-handed coordinate system. With the default camera direction: positive X-axis
+                    extends right, positive Y-axis extends up, and the positive Z-axis extends out of the screen towards
+                    us:</p>
+                <img src="img/rh.jpg">
+            </section>
+            <section>
+                <ul>
+                    <li>A-frame give us some geometry primitives, let's add some to a scene</li>
+                    <li>Open 1.html from the code folder</li>
+                    <li>Add the following code between the a-scene tag</li>
+                </ul>
+                <pre><code><a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere></code></pre>
+            </section>
+            <section>
+                <ul>
+                    <li>A-frame tags are just like html</li>
+                </ul>
+                <img src="img/aftag.jpg">
+            </section>
+
+            <section>
+                <ul>
+                    <li>Lets look at 2.html in the browser and code editor</li>
+                    <li>Here we see 5 sphere primitives with different attributes</li>
+                    <li><a href="https://aframe.io/docs/0.9.0/primitives/a-sphere.html">Sphere Attibutes</a></li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>3.html shows all of the available primitives that A-frame gives us</li>
+                    <li><a href="https://aframe.io/docs/0.9.0/primitives/a-sphere.html">Primitives reference on the left
+                            side</a></li>
+                    <li>As A-frame is built on top of Three.js we can build our own custom primities(more on this later)
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Scene 4.html shows how to add an image with the a-image tag</li>
+                    <li>Scene 5.html shows how to add an image with the a-curvedimage tag</li>
+                </ul>
+            </section>
+            <section>
+                The curved image primitive creates images that bend around the user. Curved images arranged around the
+                camera can be pleasing for legibility since each pixel sits at the same distance from the user.
+                <a href="https://aframe.io/docs/0.9.0/primitives/a-curvedimage.html">a-curvedimage reference</a>
+            </section>
+            <section>
+                <ul>
+                    <li>Adding a 360 image is easy look at 6.html</li>
+                    <li>Here, we are using th a-sky tag with and equiractangular image</li>
+                </ul>
+            </section>
+            <section>
+                Equirectangular projection is an image projection used for cinematic VR content, which applies a certain
+                distortion to a panorama so that it is shown correctly when projected on the inside of a sphere
+            </section>
+            <section>
+                <ul>
+                    <li>Note that 4,5,6.html use an a-assets opeing and closing tag inside a-scene</li>
+                    <li>Inside those tage we load the images</li>
+                    <li>This is a-frames assets management system for preloading items before the scene loads</li>
+                    <li>Here we should include 3d models, Images, Video and Textures</li>
+                    <li><a href="https://aframe.io/docs/0.9.0/core/asset-management-system.html#sidebar">A-framse asset
+                            management reference</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <ul>
+                    <li>Note that 4,5,6.html use an a-assets opeing and closing tag inside a-scene</li>
+                    <li>Inside those tags we load the images</li>
+                    <li>This is a-frames assets management system for preloading items before the scene loads</li>
+                    <li>Here we should include 3d models, Images, Video and Textures</li>
+                    <li><a href="https://aframe.io/docs/0.9.0/components/material.html">Material reference</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <ul>
+                    <li>7.html demontrates loading image and videos and using them ase texture on geometry</li>
+                    <li>Note that we use the material attribute to specify the src material for the spheres</li>
+                    <li>Yhe materil attrubute has a lot of options</li>
+                    <li><a href="https://aframe.io/docs/0.9.0/core/asset-management-system.html#sidebar">A-framse asset
+                            management reference</a></li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>8.html demontrates loading a sound file and attaching it to geometry</li>
+                    <li>Use the WASD keys to move away from the sound</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>9.html demontrates how to animate properties</li>
+                    <li><a href="https://www.npmjs.com/package/aframe-animation-component">Animation reference 1</a>
+                    </li>
+                    <li><a href="https://aframe.io/docs/0.9.0/components/animation.html#sidebar">Animation reference
+                            2</a></li>
+                </ul>
+            </section>
+
+            <section>
+
+                Using the A-frame inspector
+                <img src="img/inspector.png">
+
+            </section>
+
+            <section>
+                The A-Frame Inspector is a visual tool for inspecting and tweaking scenes. With the Inspector, we can:
+                <ul>
+                    <li>Drag, rotate, and scale entities using handles and helpers</li>
+                    <li>Tweak an entity’s components and their properties using widgets</li>
+                    <li>Immediately see results from changing values without having to go back and forth between code
+                        and the browser</li>
+                </ul>
+
+            </section>
+            <section>
+                <ul>
+                    <li>The easiest way to use is to press the <ctrl> + <alt> + i shortcut on our keyboard. </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>To make things more interesting I made a template with teleport controls</li>
+                    <li>Open template/index.html in a text editor</li>
+                    <li>It should be in the browser as something like http://localhost:8080/basic2.html</li>
+                    <li>This uses <a href="https://github.com/fernandojsg/aframe-teleport-controls">teleport
+                            controls</a></li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Adding a skymap</li>
+                    <li>add the img in the a-assets section</li>
+                    <li>add the a-sky tag in the scene outside of the a-assets section</li>
+                    <li>You need an equirectangular image for a sky</li>
+                    <li><a href="https://www.flickr.com/search/?l=commderiv&q=equirectangular">Here are some</a></li>
+                    <li><a href="http://photopin.com/free-photos/equirectangular">Here are some more</a></li>
+                </ul>
+                <pre><code data-trim>
+<a-scene>
+<a-assets>
+    <img id="sky" src="assets/img/env.jpg">
+</a-assets>
+    <a-sky src="#sky"></a-sky>
+</a-scene>
+                                        </code></pre>
+            </section>
+            <section>
+                <li><a href="https://aframe.io/docs/1.0.0/introduction/">A-frame reference</a></li>
+            </section>
+
+            <section>
+                <li><a href="https://aframe.io/docs/1.0.0/introduction/visual-inspector-and-dev-tools.html">Lets have a
+                        look at the visual inspector</a></li>
+            </section>
+
+            <section>
+                <p>Homework: Make a scene, put on github, share in discord</p>
+            </section>
+
+            <section>
+                3D file formats
+            </section>
+            <section>
+                <p>The OBJ file format is a simple data-format that represents 3D geometry alone — namely, the position
+                    of each vertex, the UV position of each texture coordinate vertex, vertex normals, and the faces
+                    that make each polygon defined as a list of vertices, and texture vertices.</p>
+            </section>
+            <section>
+                <img src="img/obj.png">
+            </section>
+            <section>
+                <p>FBX (Filmbox) is a proprietary file format (.fbx) developed by Kaydara and owned by Autodesk since
+                    2006. It is used to provide interoperability between digital content creation applications.</p>
+            </section>
+            <section>
+                <img src="img/fbx.jpg">
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="80px" data-background-transition="zoom">
+                <img src="img/gltf.png" height="500"><br>
+                <a href=" https://www.khronos.org/gltf/">GL Transmission Format(GLTF)</a>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="80px" data-background-transition="zoom">
+                <img src="img/gltf_struct.png" height="300"><br>
+                <a href=" https://www.khronos.org/gltf/">GL Transmission Format(GLTF)</a>
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat"
+                data-background-size="80px" data-background-transition="zoom">
+                <p>GLTF</p>
+                <ul>
+                    <li class="fragment">glTF (GL Transmission Format) is a file format for 3D scenes and models using
+                        the JSON standard.</li>
+                    <li class="fragment">It is described by its creators as the "JPEG of 3D."</li>
+                    <li class="fragment">It is an API-neutral runtime asset delivery format developed by the Khronos
+                        Group 3D Formats Working Group.</li>
+                    <li class="fragment">The intention is that glTF be an efficient, interoperable asset delivery format
+                        that compresses the size of 3D scenes and minimizes runtime processing by applications using
+                        WebGL and other APIs.</li>
+                    <li class="fragment">glTF also defines a common publishing format for 3D content tools and services.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                    <ul>
+                    <li>Loading a 3d model</li>
+                    <li>Out of the box A-frame support to 3d model file formats obj and gltf</li>
+                    <li>Obj is the classic format</li>
+                    <li><a href="https://aframe.io/docs/0.8.0/primitives/a-obj-model.html">Obj Import</a></li>
+                    <li><a href="https://aframe.io/docs/0.8.0/primitives/a-obj-model.html">Obj Import</a></li>
+                    <li><a href="https://github.com/feiss/aframe-environment-component">environments reference</a></li>
+                    </ul>
+                    <pre><code data-trim>
+                    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+                    <a-entity environment="preset: tron"></a-entity>
+                    </code></pre>
+            </section>
+
+
+
+
+
+        </div>
+    </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function () {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function () {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }]
+        });
+    </script>
+</body>
+
+</html>

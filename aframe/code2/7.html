@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Basic Interactions - A-Frame</title>
+    <meta name="description" content="Interactions - A-Frame">
+    <script src="js/aframe-master.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="gndTexture" src="assets/img/grid.jpg">
+        </a-assets>
+
+        <a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#F44336">
+        </a-box>
+        <a-box position="-1 2 -5" rotation="0 45 45" scale="0.75 0.75 0.75" color="#2196F3">
+        </a-box>
+        <a-box position="2 2 -4" rotation="0 45 30" scale="0.75 0.75 0.75" color="#009688">
+        </a-box>
+        <a-box position="1 1 -5" rotation="0 70 30" scale="0.9 0.9 0.9" color="#E91E63">
+        </a-box>
+
+
+        <!-- Laser controls for 2 hands we only have one though -->
+        <a-entity laser-controls="hand: left"></a-entity>
+        <a-entity laser-controls="hand: right"></a-entity>
+
+        <!-- uncomment below to customize the lazer -->
+        <!-- <a-entity laser-controls="hand: right" line="color: red; opacity: 0.75"></a-entity> -->
+
+        <a-sky id="bg" color="#fff"></a-sky>
+
+        <a-plane src="#gndTexture" rotation="-90 0 0" width="50" height="50"></a-plane>
+
+        <a-camera>
+            <!-- a-cursor gives a control to ppl with no headset -->
+            <a-cursor></a-cursor>
+        </a-camera>
+
+    </a-scene>
+</body>
+
+</html>

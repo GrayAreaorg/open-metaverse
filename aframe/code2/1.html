@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js">
+    </script>
+
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-mixin id="teleport" teleport-controls="type: parabolic; cameraRig: #cameraRig; defaultPlaneSize: 1000;">
+            </a-mixin>
+
+            <!-- import space invader models at textures -->
+            <a-asset-item id="si-obj" src="assets/models/si/space_invader.obj"></a-asset-item>
+            <a-asset-item id="si-mtl" src="assets/models/si/space_invader.mtl"></a-asset-item>
+
+        </a-assets>
+
+
+        <!-- create default environment -->
+        <a-entity environment="preset: default"></a-entity>
+
+        <!-- create space invader models in the scene -->
+        <a-entity obj-model="obj: #si-obj; mtl: #si-mtl" position="-5 18 25">
+            <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite">
+            </a-animation>
+        </a-entity>
+
+        <!-- create a camera rig and attach it to the teleport controls -->
+        <a-entity id="cameraRig" position="0 0.1 0">
+            <a-entity camera wasd-controls look-controls></a-entity>
+            <!-- right hand controller -->
+            <a-entity id="rightHand" mixin="teleport" laser-controls="hand: right" oculus-go-controls="hand: right">
+            </a-entity>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
