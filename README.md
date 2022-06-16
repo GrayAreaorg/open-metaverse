@@ -2,4 +2,4 @@
 Gray Area Open Metaverse Educational Info
 
 URL: https://qrco.de/openmeta
-![frame](https://user-images.githubusercontent.com/5863550/174150744-f9c8e0c9-af6c-4aa2-a7cd-fff0ae5dd72c.jpg)
+![qr](https://user-images.githubusercontent.com/5863550/174151027-40ea0e79-369c-4906-a8a6-eec2c6ff7025.jpg)
