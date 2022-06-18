@@ -38,7 +38,7 @@ Gray Area Open Metaverse Educational Info
 
 [Mixamo](https://www.mixamo.com/#/)  
 
-[Final Projects](https://www.mixamo.com/#/](https://docs.google.com/document/d/1vEMlZ7QDFTLbxxVkSmAni1PDuAuW3kuNs2lmZDZi1S4/edit?usp=sharing)  
+[Final Projects](https://docs.google.com/document/d/1vEMlZ7QDFTLbxxVkSmAni1PDuAuW3kuNs2lmZDZi1S4/edit?usp=sharing)  
 
 
 
