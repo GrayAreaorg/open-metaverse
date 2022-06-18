@@ -27,6 +27,7 @@ Gray Area Open Metaverse Educational Info
 [Blender Main Site](https://www.blender.org/)  
 [Blender Cheatsheet](https://github.com/GrayAreaorg/open-metaverse/blob/main/blender_cs.pdf)  
 [Awesome Blender](https://github.com/agmmnn/awesome-blender)  
+[Blender Workshop](https://docs.google.com/document/d/1RxpXUiAtMijGb38z_7pLaUkRSbTUMHI9vT0GtbwKzYA/edit?usp=sharing)
 
 **Polycam resources**
 [Polycam Docs](https://learn.poly.cam/)  
