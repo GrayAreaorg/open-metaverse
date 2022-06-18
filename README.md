@@ -10,7 +10,10 @@ Gray Area Open Metaverse Educational Info
 **[Presentation](https://docs.google.com/presentation/d/e/2PACX-1vSBc08aiivEH8pNMMl_YB_EvzZY3wNxqeKkRnU7HJEbTtrNPLxn72b-JvvHSpRx7fjUvRGideSn_24z/pub?start=false&loop=false&delayms=3000)**
 
 **Aframe resources**  
-[Aframe main](https://aframe.io/)
+[Aframe Main Site](https://aframe.io/)  
+[Aframe Docs](https://aframe.io/docs/1.3.0/introduction/)  
+[Aframe Plugins](https://www.npmjs.com/search?q=aframe&page=1&perPage=20)  
+
 
 **Blender resources**
 
