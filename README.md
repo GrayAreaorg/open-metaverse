@@ -9,6 +9,15 @@ Gray Area Open Metaverse Educational Info
 
 **[Presentation](https://docs.google.com/presentation/d/e/2PACX-1vSBc08aiivEH8pNMMl_YB_EvzZY3wNxqeKkRnU7HJEbTtrNPLxn72b-JvvHSpRx7fjUvRGideSn_24z/pub?start=false&loop=false&delayms=3000)**
 
+**Aframe resources**
+[Aframe main](https://aframe.io/))
+
+**Blender resources**
+
+**Polycam resources**
+
+**Misc resources**
+
 ## Schedule
 * 10 AM
 Opening remarks + Logistics
