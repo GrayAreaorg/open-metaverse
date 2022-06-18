@@ -13,7 +13,8 @@ Gray Area Open Metaverse Educational Info
 [Aframe Main Site](https://aframe.io/)  
 [Aframe Docs](https://aframe.io/docs/1.3.0/introduction/)  
 [Aframe Plugins](https://www.npmjs.com/search?q=aframe&page=1&perPage=20)  
-
+[Aframe Plugins](https://github.com/AdaRoseCannon/aframe-xr-boilerplate)  
+[Networked Aframe](https://github.com/networked-aframe/networked-aframe)  
 
 **Blender resources**
 
