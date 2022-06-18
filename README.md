@@ -12,6 +12,7 @@ Gray Area Open Metaverse Educational Info
 **Aframe resources**  
 [Aframe Main Site](https://aframe.io/)  
 [Aframe Docs](https://aframe.io/docs/1.3.0/introduction/)  
+[Code Samples](https://github.com/GrayAreaorg/open-metaverse/blob/main/aframe/code_samples.zip?raw=true)  
 [Aframe Plugins](https://www.npmjs.com/search?q=aframe&page=1&perPage=20)  
 [Aframe Boilerplate](https://github.com/AdaRoseCannon/aframe-xr-boilerplate)  
 [Networked Aframe](https://github.com/AdaRoseCannon/aframe-xr-boilerplate)  
@@ -30,9 +31,9 @@ Gray Area Open Metaverse Educational Info
 **Polycam resources**
 [Polycam Docs](https://learn.poly.cam/)  
 
-**Misc resources**
+**Misc resources**  
 [Sketchfab](https://sketchfab.com/feed)  
-[Sketchfab](https://www.turbosquid.com/)  
+[Turbosquid](https://www.turbosquid.com/)  
 
 [Mixamo](https://www.mixamo.com/#/)  
 
