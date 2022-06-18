@@ -15,6 +15,12 @@ Gray Area Open Metaverse Educational Info
 [Aframe Plugins](https://www.npmjs.com/search?q=aframe&page=1&perPage=20)  
 [Aframe Plugins](https://github.com/AdaRoseCannon/aframe-xr-boilerplate)  
 [Networked Aframe](https://github.com/AdaRoseCannon/aframe-xr-boilerplate)  
+[Using Three.js](https://aframe.io/docs/1.3.0/introduction/developing-with-threejs.html)  
+
+**WebAR resources**  
+[MindAR](https://github.com/hiukim/mind-ar-js)  
+[8th Wall](https://www.8thwall.com/)  
+[Zappar](https://www.zappar.com/)  
 
 **Blender resources**
 [Blender Main Site](https://www.blender.org/)  
@@ -26,6 +32,8 @@ Gray Area Open Metaverse Educational Info
 
 **Misc resources**
 [Sketchfab](https://sketchfab.com/feed)  
+[Sketchfab](https://www.turbosquid.com/)  
+
 [Mixamo](https://www.mixamo.com/#/)  
 
 ## Schedule
