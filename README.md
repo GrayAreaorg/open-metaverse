@@ -14,13 +14,19 @@ Gray Area Open Metaverse Educational Info
 [Aframe Docs](https://aframe.io/docs/1.3.0/introduction/)  
 [Aframe Plugins](https://www.npmjs.com/search?q=aframe&page=1&perPage=20)  
 [Aframe Plugins](https://github.com/AdaRoseCannon/aframe-xr-boilerplate)  
-[Networked Aframe](https://github.com/networked-aframe/networked-aframe)  
+[Networked Aframe](https://github.com/AdaRoseCannon/aframe-xr-boilerplate)  
 
 **Blender resources**
+[Blender Main Site](https://www.blender.org/)  
+[Blender Cheatsheet](https://github.com/GrayAreaorg/open-metaverse/blob/main/blender_cs.pdf)  
+[Awesome Blender](https://github.com/agmmnn/awesome-blender)  
 
 **Polycam resources**
+[Polycam Docs](https://learn.poly.cam/)  
 
 **Misc resources**
+[Sketchfab](https://sketchfab.com/feed)  
+[Mixamo](https://www.mixamo.com/#/)  
 
 ## Schedule
 * 10 AM
