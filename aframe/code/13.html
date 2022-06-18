@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+
+</head>
+
+<body>
+    <a-scene>
+        <a-entity id="enviro" position="0 -.001 0" scale="15 15 15" environment="
+            preset: tron; 
+            groundYScale: 100; 
+            fog: 0; 
+            dressingAmount: 100; 
+            groundColor2: #dd00d1; 
+            groundColor: #dd0011; 
+            groundTexture: walkernoise;
+            ground: hills;
+            groundYScale: 30;
+            active: true; seed: 17; 
+            skyType: gradient; 
+            skyColor: #87faf4; 
+            horizonColor: #b100200;
+            flatShading: true; 
+            dressing: arches;
+            dressingColor: #4f30f7; 
+            dressingScale: 0; 
+            dressingAmount: 0;
+            dressingOnPlayArea: 1; 
+            gridColor: #239893">
+        </a-entity>
+        <a-assets>
+
+        </a-assets>
+
+        <a-curve id="track1">
+            <a-curve-point position="-734 150 801" curve-point=""></a-curve-point>
+            <a-curve-point position="-734 749.82712 801" curve-point=""></a-curve-point>
+            <a-curve-point position="841 566.19185 -820" curve-point=""></a-curve-point>
+            <a-curve-point position="-1163.83205 523.83792 801" curve-point=""></a-curve-point>
+            <a-curve-point position="124.57211 274.53072 55.3373" curve-point=""></a-curve-point>
+            <a-curve-point position="762 500 831"></a-curve-point>
+            <a-curve-point position="-734 150 801"></a-curve-point>
+        </a-curve>
+        <a-draw-curve curveref="#track1" material="shader: line;
+        color: red;"></a-draw-curve>
+
+        <!-- Set the camera to follow the curve -->
+        <a-entity alongpath="curve: #track1; loop: true; dur: 100000">
+            <a-camera></a-camera>
+        </a-entity>
+
+    </a-scene>
+</body>

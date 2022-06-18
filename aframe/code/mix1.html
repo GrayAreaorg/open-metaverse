@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello, WebVR! • A-Frame</title>
+  <meta name="description" content="Hello, WebVR! • A-Frame">
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <a-mixin id="red" material="color: red"></a-mixin>
+      <a-mixin id="blue" material="color: blue"></a-mixin>
+      <a-mixin id="cube" geometry="primitive: box"></a-mixin>
+      <a-mixin id="transparent" material="opacity: .5"></a-mixin>
+      <a-mixin id="rotate" animation__rotation="property: rotation; from:0 0 0; to: 0 360 0; loop: true; dur: 3000; dir: alternate; easing: easeInSine"></a-mixin>
+
+
+    </a-assets>
+    <a-entity environment="preset: forest"></a-entity>
+
+    <a-entity position="-4 1 -5" mixin="red cube"></a-entity>
+    <a-entity position="0 1 -5" mixin="blue cube"></a-entity>
+    <a-entity position="4 1 -5" mixin="cube transparent rotate"></a-entity>
+
+  </a-scene>
+</body>
+
+</html>

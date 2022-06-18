@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script>
+        // register your component here with a name
+        AFRAME.registerComponent('hello-world', {
+            // delare functions in your component with this pattern, name of function first
+            init: function () {
+                //Write code here
+                console.log("Hello World")
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <a-scene>
+        <!-- Attach components to an entity tag by adding the name -->
+        <a-entity hello-world>
+    </a-scene>
+</body>
+<script>
+</script>
+
+</html>

@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <script src="foo-component.js"></script>
+</head>
+
+<body>
+    <script>
+        // Or inline before the <a-scene>.
+        AFRAME.registerComponent('bar', {
+            // ...
+        });
+    </script>
+
+    <a-scene>
+        <a-entity bar></a-entity>
+    </a-scene>
+</body>
+
+</html>

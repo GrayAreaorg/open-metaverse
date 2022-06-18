@@ -1,0 +1,35 @@
+<html>
+
+<head>
+        <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script>
+        // register your component here with a name
+        AFRAME.registerComponent('hello-world', {
+            init: function () {
+                var box = document.createElement('a-box');
+                box.setAttribute('color', 'green');
+                box.setAttribute('position', '0 2 -5');
+                box.setAttribute('scale', '1 1 1');
+                this.el.appendChild(box);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <a-scene>
+        <!-- Attach components to an entity tag by adding the name -->
+        <a-entity hello-world>
+        </a-entity>
+        <!-- uncomment to pass an argument -->
+        <!-- <a-entity hello-world=" message: cool news! " position="0 2 -4 "> -->
+        <!-- 
+            <a-entity camera look-controls wasd-controls></a-entity> -->
+        <a-plane rotation="-90 0 0" color="red" width="50" height="50"></a-plane>
+
+    </a-scene>
+</body>
+<script>
+</script>
+
+</html>

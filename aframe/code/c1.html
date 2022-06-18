@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Interactions - A-Frame</title>
+    <meta name="description" content="Interactions - A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="gndTexture" src="assets/img/grid.jpg">
+        </a-assets>
+        
+        <a-entity camera look-controls wasd-controls>
+            <a-entity cursor="fuse: true; fuseTimeout: 500"
+                      position="0 0 -1"
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                      material="color: black; shader: flat">
+            </a-entity>
+          </a-entity>
+        
+        <a-sky id="bg" color="#fff"></a-sky>
+
+
+        <a-box position="-3 1 -5" rotation="0 90 30" scale="" color="#F44336" 
+            event-set__click="material.color: red; scale: 2 2 2"
+            event-set__mouseenter="material.color: blue"
+            event-set__1="_event: mouseleave; material.color: red"
+            event-set__enter="_event: mouseenter; _target: #ground; color: #F44336"
+            sound="src: assets/sound/sound9.mp3; on: mouseenter"></a-box>
+        </a-box>
+        <a-box position=" -1 2 -5 " rotation="0 45 45 " scale="0.75 0.75 0.75 " color="#2196F3" 
+            event-set__click="material.color: purple; scale: 2 2 2"
+            event-set__mouseenter="material.color: green"
+            event-set__1="_event: mouseleave; material.color: orange"
+            event-set__enter="_event: mouseenter; _target: #ground; color: #2196F3"
+            sound="src: assets/sound/sound20.mp3; on: mouseenter">
+        </a-box>
+        <a-box position="2 2 -4 " rotation="0 45 30 " scale="0.75 0.75 0.75 " color="#009688"
+            event-set__click="material.color: magenta; scale: 2 2 2"
+            event-set__mouseenter="material.color: yellow"
+            event-set__1="_event: mouseleave; material.color: orange"
+            event-set__enter="_event: mouseenter; _target: #ground; color: #009688" 
+            sound="src: assets/sound/sound24.mp3; on: mouseenter">
+        </a-box>
+        <a-box position="1 1 -5 " rotation="0 70 30 " scale="0.9 0.9 0.9 " color="#E91E63"
+            event-set__click="material.color: teal; scale: 2 2 2"
+            event-set__mouseenter="material.color: green"
+            event-set__1="_event: mouseleave; material.color: red"
+            event-set__enter="_event: mouseenter;  _target: #ground; color: #E91E63" 
+            sound="src: assets/sound/sound27.mp3; on: mouseenter">
+        </a-box>
+
+        <!-- Uncomment to add laser controls for VR controllers -->
+        <!-- <a-entity laser-controls="hand: left "></a-entity>
+        <a-entity laser-controls="hand: right "></a-entity> -->
+
+        <a-sky id="bg " color="#fff "></a-sky>
+
+        <a-plane id="ground" rotation="-90 0 0 " width="50" height="50" color="green"></a-plane>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene light="defaultLightsEnabled: false">
+
+    <!-- <a-scene light="defaultLightsEnabled: false" fog="type: linear; color: #AAB; far: 10; near: 0"></a-scene> -->
+ 
+        <!-- ambient light fills the whole scene -->
+        <a-entity light="type: ambient; color: red; intensity: 1;"></a-entity>
+        <!-- <a-entity light="type: ambient; color: white; intensity: .5;"></a-entity> -->
+
+        <!-- Directional lights are like a light source that is infinitely far away, but shining from a specific direction, like the sun.  -->
+
+        <!-- <a-entity light="type: directional; color: red; intensity: 1" position="-1 1 1"></a-entity> -->
+        <!-- <a-entity light="type: directional; color: green; intensity: 1" position="1 1 1"></a-entity> -->
+        <!-- <a-entity light="type: directional; color: white; intensity: 1" position="2 1 1"></a-entity> -->
+
+        <!-- We can specify the direction of the directional light with its orientation by creating an entity it targets. -->
+
+        <!-- <a-light type="directional" position="5 0 0" color="red" rotation="-90 0 0" target="#directionaltarget">
+        </a-light>
+
+        <a-light type="directional" position="-5 0 0" color="green" rotation="-90 0 0" target="#directionaltarget">
+        </a-light> -->
+
+        <!-- <a-entity light="type: hemisphere; color: white; groundColor: red; intensity: 1"></a-entity> -->
+
+        <!-- Point lights are like light bulb. The closer the light bulb gets to an object, the greater the object is lit. -->
+        <!-- <a-entity id="point" light="type: point; intensity: 1; distance: 50; decay: 2"
+          position="0 5 -2"></a-entity> -->
+
+        <!-- Spot lights are like point lights in the sense that they affect materials depending on its position and distance, but spot lights are not omni-directional. They mainly cast light in one direction, like the Bat-Signal. -->
+        <!-- <a-entity id="spot" light="type: spot; angle: 45"></a-entity> -->
+
+        <a-box width="1" id="directionaltarget" height="1" depth="1" color="white" position="0 1.5 -4" rotation="0 30 0" shadow="cast: true"
+        animation__rotation="property: rotation; from:0 0 0; to: 0 360 0; loop: true; dur: 3000; dir: alternate; easing: easeInSine">
+        </a-box>
+
+        <!-- <a-sphere id="directionaltarget" position="0 2 -3" translate="0 3 0" radius="1"
+        material="coloe: white; transparent: true; opacity: 1; emissive: green; wireframe: false; metalness: 1; roughness: 1;"></a-sphere> -->
+
+        <a-plane width="40" shadow="receive: true" height="40" color="white" position="0 -1 -4" rotation="-90 0 0">
+        </a-plane>
+
+        </a-box>
+
+    </a-scene>
+</body>
+
+</html>

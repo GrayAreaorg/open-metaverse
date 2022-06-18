@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+
+  <a-scene>
+    <a-assets>
+      <a-asset-item id="room" src="assets/models/simple_voxel_bedroom/scene.gltf"></a-asset-item>
+      <a-asset-item id="minion" src="assets/models/minion/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity light="type: ambient; color: #CCC; intensity 0.5"></a-entity>
+
+    <!-- parent entity -->
+    <a-entity id="roomscene" position="0 0 -1">
+    <!-- a-entity with gltf model component -->
+      <a-entity gltf-model="#room" scale="0.04 0.04 0.04">
+        <a-entity gltf-model="#minion"  position="-7.746 10.680 -25.23" scale="0.3 0.3 0.3" animation-mixer>
+
+          <a-entity animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true">
+            <a-entity geometry="primitive: box" material="color: red; emissive: red; emissiveIntensity: 5;" scale="5 5 5" position="100 0 0" light="type: point; intensity: 2.0; color: red;">
+            </a-entity>
+
+            <a-entity animation="property: rotation; to: 0 0 360; dur: 4000; easing: linear; loop: true">
+              <a-entity geometry="primitive: box" material="color: green; emissive: green; emissiveIntensity: 5;" scale="5 5 5" 
+                position="100 0 0" light="type: point; intensity: 2.0; color: green;"></a-entity>
+            </a-entity>
+
+          </a-entity>
+        </a-entity>
+      </a-entity>
+    </a-entity>
+
+      <a-entity id="roomscene" position="3.42824 0 -2.19913" rotation="180 0 180">
+        <a-entity gltf-model="assets/models/simple_voxel_bedroom/scene.gltf" scale="0.04 0.04 0.04">
+          <a-entity gltf-model="assets/models/minion/scene.gltf" position="-7.746 10.68 -25.23" scale="0.3 0.3 0.3" animation-mixer="">
+  
+            <a-entity animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true">
+              <a-entity geometry="" material="color: red; emissive: red; emissiveIntensity: 5" scale="5 5 5" position="100 0 0" light="type: point; intensity: 2; color: red">
+              </a-entity>
+  
+              <a-entity animation="property: rotation; to: 0 0 360; dur: 4000; easing: linear; loop: true">
+                <a-entity geometry="" material="color: green; emissive: green; emissiveIntensity: 5" scale="5 5 5" position="100 0 0" light="type: point; intensity: 2; color: green"></a-entity>
+              </a-entity>
+  
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="roomscene" position="-1.14602 0 -5.46715" rotation="0 -90 0">
+        <a-entity gltf-model="assets/models/simple_voxel_bedroom/scene.gltf" scale="0.04 0.04 0.04">
+          <a-entity gltf-model="assets/models/minion/scene.gltf" position="-7.746 10.68 -25.23" scale="0.3 0.3 0.3" animation-mixer="">
+  
+            <a-entity animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true">
+              <a-entity geometry="" material="color: red; emissive: red; emissiveIntensity: 5" scale="5 5 5" position="100 0 0" light="type: point; intensity: 2; color: red">
+              </a-entity>
+  
+              <a-entity animation="property: rotation; to: 0 0 360; dur: 4000; easing: linear; loop: true">
+                <a-entity geometry="" material="color: green; emissive: green; emissiveIntensity: 5" scale="5 5 5" position="100 0 0" light="type: point; intensity: 2; color: green"></a-entity>
+              </a-entity>
+  
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-entity> -->
+
+      
+
+    
+
+    <!-- we can start to give it definition with attributes such as geometry, material and postion components -->
+    <!-- <a-entity geometry="primitive: box" material="color: red" position="0 1 -2"></a-entity>
+
+    <a-entity geometry="primitive: box" material="color: green; emissive: green; emissiveIntensity: 1;"
+      position="0 3 -2" light="type: point; intensity: 2.0; color: green;"></a-entity>
+
+    <a-entity animation="property: rotation; to: 0 0 360; dur: 4000; easing: linear; loop: true">
+      <a-entity geometry="primitive: box" material="color: green; emissive: green; emissiveIntensity: 1;"
+        position="5 0 0" light="type: point; intensity: 2.0; color: green;"></a-entity>
+    </a-entity>
+
+    <a-entity animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true">
+      <a-entity geometry="primitive: box" material="color: red; emissive: red; emissiveIntensity: 1;" position="5 0 0"
+        light="type: point; intensity: 2.0; color: red;"></a-entity>
+    </a-entity>
+
+    <a-entity animation="property: rotation; to: 0 -360 0; dur: 4000; easing: linear; loop: true">
+      <a-entity geometry="primitive: box" material="color: yellow; emissive: yellow; emissiveIntensity: 1;"
+        position="5 0 0" light="type: point; intensity: 2.0; color: yellow;"></a-entity>
+    </a-entity>
+
+    <a-plane width="400" shadow="receive: true" height="400" color="white" position="0 -1 -4" rotation="-90 0 0">
+    </a-plane>
+
+  </a-scene>
+</body>
+
+</html>

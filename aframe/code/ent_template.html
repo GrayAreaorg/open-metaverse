@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+
+<body>
+
+  <a-scene>
+    <a-assets>
+      <img id="sky" src="assets/img/sfai12.jpg">
+    </a-assets>
+
+    <!-- a-entity by itself does nothing -->
+    <a-entity></a-entity>
+
+    <!-- we can start to give it definition with attributes such as geometry, material and postion components -->
+    <a-entity geometry="primitive: torusKnot; s: 32" material="color: red; metalness: 1" position="0 1 -4" scale=".5 .5 .5"></a-entity>
+
+    <a-entity geometry="primitive: torusKnot; s: 32" material="color: red; metalness: 1; wireframe: true;" position="0 4 -4" scale=".5 .5 .5"></a-entity>
+
+
+    <a-entity animation="property: rotation; to: 0 0 360; dur: 4000; easing: linear; loop: true">
+      <a-entity geometry="primitive: box" material="color: green; emissive: green; emissiveIntensity: 1;"
+        position="5 0 0" light="type: point; intensity: 2.0; color: green;"></a-entity>
+    </a-entity>
+
+    <a-entity animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true">
+      <a-entity geometry="primitive: box" material="color: red; emissive: red; emissiveIntensity: 1;" position="5 0 0"
+        light="type: point; intensity: 2.0; color: red;"></a-entity>
+    </a-entity>
+
+    <a-entity animation="property: rotation; to: 0 -360 0; dur: 4000; easing: linear; loop: true">
+      <a-entity geometry="primitive: box" material="color: yellow; emissive: yellow; emissiveIntensity: 1;"
+        position="5 0 0" light="type: point; intensity: 2.0; color: yellow;"></a-entity>
+    </a-entity>
+
+    <a-plane width="400" shadow="receive: true" height="400" color="white" position="0 -1 -4" rotation="-90 0 0">
+    </a-plane>
+
+    </a-box>
+
+  </a-scene>
+</body>
+
+</html>

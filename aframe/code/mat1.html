@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene>
+        <a-assets>
+            <img id="sky" src="assets/img/sfai12.jpg">
+          </a-assets>
+        <a-sky src="#sky"></a-sky>
+        <!-- <a-light type="directional" position="-1 1 1" color="red"></a-light>
+        <a-light type="directional" position="1 1 1" color="green"></a-light>
+        <a-light type="directional" position="1 1 1" color="white"></a-light>
+        <a-light type="directional" position="-1 1 1" color="red"></a-light>
+        <a-light type="ambient" color="red" intensity="1"></a-light> -->
+        <a-light type="ambient" color="white" intensity=".5"></a-light> 
+        <a-light type="directional" position="5 0 0" color="red" rotation="-90 0 0" target="#directionaltarget" castShadow:true;>
+        </a-light>
+
+        <a-light type="directional" position="-5 0 0" color="green" rotation="-90 0 0" target="#directionaltarget" castShadow:true;>
+        </a-light>
+
+        <!-- <a-box width="1" id="directionaltarget" height="1" depth="1" color="white" position="0 1.5 -4" rotation="0 30 0" shadow="cast: true"
+        animation__rotation="property: rotation; from:0 0 0; to: 0 360 0; loop: true; dur: 3000; dir: alternate; easing: easeInSine">
+        </a-box> -->
+
+        <a-entity geometry="primitive: sphere; radius: 2" 
+        id="directionaltarget" 
+        material="color:#eee; sphericalEnvMap:#sky;metalness:1;roughness:0;side:double;" 
+        position="-2 2 -3"
+        ></a-entity>
+
+        <!-- <a-entity geometry="primitive: sphere; radius: 2" id="directionaltarget" 
+        material="color: white; transparent: true; opacity: 1; emissive: green; wireframe: false; metalness: 1; roughness: 1;"
+        position="0 2 -3"
+        radius="1"
+        ></a-entity> -->
+
+        
+
+
+        <a-plane width="400" shadow="receive: true" height="400" color="white" position="0 -1 -4" rotation="-90 0 0">
+        </a-plane>
+
+        </a-box>
+
+    </a-scene>
+</body>
+
+</html>

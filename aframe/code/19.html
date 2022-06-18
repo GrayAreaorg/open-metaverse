@@ -1,0 +1,83 @@
+<!-- include A-Frame obviously -->
+<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+
+
+<script>
+    // register your component here with a name
+    AFRAME.registerComponent('hello-world', {
+        schema: {
+            amount: {
+                type: 'number',
+                default: 10
+            },
+            color: {
+                type: 'color',
+                default: 'red'
+            },
+            duration: {
+                type: 'number',
+                default: 10000
+            },
+        },
+        //custom function
+        getRandomInt: function (min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+        },
+         //custom function
+        getRandomColor: function () {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        },
+        init: function () {
+            //for loop of torus-knots
+            for (let i = 1; i < this.data.amount; i++) {
+                var knot = document.createElement('a-torus-knot');
+                knot.setAttribute('color', this.getRandomColor());
+                knot.setAttribute('position', '0 0 0');
+                knot.setAttribute('radius-tubular', i * 0.009);
+                knot.setAttribute('scale', '0.09 0.09 0.09');
+                knot.setAttribute('rotation', i + ' ' + i + ' ' + i);
+                knot.setAttribute('radius', i);
+                knot.setAttribute('metalness', 1);
+
+                //append animation attributes
+                knot.setAttribute('animation__rotate', {
+                    property: 'rotation',
+                    to: "'" + this.getRandomInt(1, 720) + " " + this.getRandomInt(1, 720) + " " + this.getRandomInt(1, 720) + "'",
+                    loop: 'true',
+                    easing: 'easeInSine',
+                    dur: this.data.duration
+                });
+
+                knot.setAttribute('animation__color', {
+                    property: 'material.color',
+                    dir: 'alternate',
+                    easing: 'easeInOutElastic',
+                    to: '#FFF',
+                    loop: 'true',
+                    dur: this.data.duration
+                });
+                this.el.appendChild(knot);
+            }
+        }
+    });
+</script>
+
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene>
+        <!-- Aframe asset system. preload assets here -->
+        <!-- create your content here. just a box for now -->
+        <a-entity hello-world="amount:80;duration:50000" position="-3 2 -14">
+        </a-entity>
+    </a-scene>
+</body>
+
+
+<html>
