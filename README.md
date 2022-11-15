@@ -27,6 +27,7 @@ Gray Area Open Metaverse Educational Info
 [Blender Main Site](https://www.blender.org/)  
 [Blender Cheatsheet](https://github.com/GrayAreaorg/open-metaverse/blob/main/blender_cs.pdf)  
 [Awesome Blender](https://github.com/agmmnn/awesome-blender)  
+[Blender Workshop](https://docs.google.com/document/d/1RxpXUiAtMijGb38z_7pLaUkRSbTUMHI9vT0GtbwKzYA/edit?usp=sharing)
 
 **Polycam resources**
 [Polycam Docs](https://learn.poly.cam/)  
@@ -36,6 +37,10 @@ Gray Area Open Metaverse Educational Info
 [Turbosquid](https://www.turbosquid.com/)  
 
 [Mixamo](https://www.mixamo.com/#/)  
+
+## [Final Projects](https://docs.google.com/document/d/1vEMlZ7QDFTLbxxVkSmAni1PDuAuW3kuNs2lmZDZi1S4/edit?usp=sharing)  
+
+
 
 ## Schedule
 * 10 AM
