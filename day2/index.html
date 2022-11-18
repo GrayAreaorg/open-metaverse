@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>AR Storytelling Workshop</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+					<figure>
+						<h2 class="intro">Open Metaverse Immersive: Day
+							2</h2 class="intro">
+					</figure>
+				</section>
+				<section><img src="img/nytrd1.png"><br><a href="https://rd.nytimes.com/">New York Times R&D</a></section> 
+				<section><img src="img/nytrd.png"><br><a href="https://rd.nytimes.com/projects/streaming-vr">New York Times R&D</a></section> 
+				<section><iframe src="https://nytimes.github.io/aframe-loader-3dtiles-component/examples/webxr/" title="Freeman Alley" height="600" width="800"></iframe></section>
+				<section><a href="https://3d.si.edu/">3d.si.edu</a><img src="img/si1.png"></section>
+				<section><a href="https://3d.si.edu/">3d.si.edu</a><img src="img/si2.png"></section>
+				<section><iframe src="https://mhellar.github.io/xrstorytellling/mammoth/" title="Wolly Mammoth" height="800" width="800"></iframe></section>
+				<section><img src="img/ar.png" height="300"><video width="640" height="480" loop="true" controls>
+					<source src="img/armamoth.mp4" type="video/mp4">
+				  </video></section>
+				<section><img src="img/3dscan.jpg" height="300"><br>We can 3d scan things with our Phones!</section> 
+				<section><img src="img/arplant.png" height="300"><img src="img/plant.png" height="300"></section>
+				<section>
+					<h4>Agenda</h4><br>
+					<ul>
+						<li>Polycam(iOS) Widar(Android) - for 3d scanning</li>
+						<li>Making a Montage in Blender</li>
+						<li>Model-Viewer - for scene authoring</li>
+						<li>Github - for posting to the web</li>
+					</ul>
+				</section>
+				<section><img src="img/polycam2.PNG" height="500"><br>Polycam Demo</section>
+				<section>Which Mode to Use: LiDAR or Photo? – Try Both
+					<br>
+					<ul>
+						<li>Lidar is very fast, not as detailed. Great for large interiors</li>
+						<li>Photo Mode is higher quality, takes longer to process.</li>
+					</ul>
+					<a href="https://3dwithus.com/polycam-3d-scanning-app-review-lidar-vs-photo-mode"> Polycam Tips!</a>
+				</section>
+				<section><img src="img/polycam_portal.png" height="500"><br>Polycam Web Portal</section>
+				<section><img src="img/gltf.png" height="300"><br>Export your model as a gltf file</a></section>
+				<section>					<ul>
+					<li>Lets take the next 45 minutes to practice 3D Scanning</li>
+					<li>TA's are available to help you</li>
+					<li>We have extra devices</li>
+					<li>It will take a some practice :)</li>
+				</ul></section>
+				<section><img src="img/modelviewer.png" height="300"><br><a href="https://modelviewer.dev/">Model-Viewer Demo</a><br><a href="img/modelviewer.pdf">Modelviewer Guide  - Thanks Anya Nazarova!</a></section>
+				<section><img src="img/gh1.png"><br>Github(Web Publishing) Demo</section>
+				<section><img src="img/gh1.png"><br>Make a new repository</section>
+				<section><img src="img/gh2.png" height="450"><br>repository name is: yourusername.github.io</section>
+				<section><img src="img/gh3.png" height="450"><br>Choose upload files</section>
+				<section><img src="img/gh5.png" height="450"><br>Select upload files and choose the files downloaded from model viewer</section>
+				<section><img src="img/gh6.png" ><br>Commit Changes</section>
+				<section><img src="img/gh7.png" height="450"><br>Wait a few minutes and go to yourusername.github.io in a webrowser</section>
+				<section><img src="img/qrcode.png" height="450"><br>You can make a QR code <a href="https://www.the-qrcode-generator.com/">here</a></section>
+				<section><img src="img/blender.png" height="450"><br>**Bonus demo - How to clean up your 3D model in Blender</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+	
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+	
+				// Optional reveal.js plugins
+				dependencies: [{
+					src: 'lib/js/classList.js',
+					condition: function() {
+						return !document.body.classList;
+					}
+				}, {
+					src: 'plugin/markdown/marked.js',
+					condition: function() {
+						return !!document.querySelector('[data-markdown]');
+					}
+				}, {
+					src: 'plugin/markdown/markdown.js',
+					condition: function() {
+						return !!document.querySelector('[data-markdown]');
+					}
+				}, {
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					condition: function() {
+						return !!document.querySelector('pre code');
+					},
+					callback: function() {
+						hljs.initHighlightingOnLoad();
+					}
+				}, {
+					src: 'plugin/zoom-js/zoom.js',
+					async: true
+				}, {
+					src: 'plugin/notes/notes.js',
+					async: true
+				}]
+			});
+		</script>
+	</body>
+</html>
