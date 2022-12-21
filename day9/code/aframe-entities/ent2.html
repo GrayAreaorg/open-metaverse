@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+</head>
+
+<body>
+
+  <a-scene>
+    <a-entity environment="preset: forest"></a-entity>
+    
+    <a-assets>
+      <a-asset-item id="room" src="assets/models/simple_voxel_bedroom/scene.gltf"></a-asset-item>
+      <a-asset-item id="minion" src="assets/models/minion/scene.gltf"></a-asset-item>
+    </a-assets>
+
+
+      <a-entity geometry="primitive: sphere; radius: .5" position="0 2 -2" color="#EF2D5E">
+      <!-- a-sphere postioned at "0 .5 0" parented from the first sphere -->
+      <a-entity geometry="primitive: sphere; radius: .5" position="0 .5 0" radius="1.25" color="#EF2D5E"></a-entity>
+      </a-entity>
+
+      <!-- a-sphere postioned at "0 1 1" with no parent -->
+      <a-entity geometry="primitive: sphere; radius: .5" position="-2 2 -2" color="blue"></a-entity>>
+
+    <a-plane width="400" shadow="receive: true" height="400" color="white" position="0 -1 -4" rotation="-90 0 0">
+    </a-plane>
+
+  </a-scene>
+</body>
+
+</html>
