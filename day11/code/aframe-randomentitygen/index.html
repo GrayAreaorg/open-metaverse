@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-randomizer-components@3.0.2/dist/aframe-randomizer-components.min.js"></script>
+    <script src="https://unpkg.com/aframe-entity-generator-component@^3.0.0/dist/aframe-entity-generator-component.min.js"></script> 
+
+  </head>
+  <body>
+    <a-scene>
+
+        <a-assets>
+            <a-asset-item id="toy" src="melonpop.glb"></a-asset-item>
+            <a-mixin id="red" material="color: red"></a-mixin>
+            <a-mixin id="candle" gltf-model="#toy" random-position="min: -20 -20 -20; max: 20 20 20;" random-rotation="min: -1 -1 -1; max: 360 360 360;"  random-scale="min: -1 -1 -1; max: 1 1 1;" ></a-mixin>
+          </a-assets>
+
+          <a-entity entity-generator="mixin: red candle; num: 5"></a-entity>
+    </a-scene>
+  </body>
+</html>

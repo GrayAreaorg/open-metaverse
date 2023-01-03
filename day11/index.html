@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>AR Storytelling Workshop</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+					<figure>
+						<h2 class="intro">Open Metaverse Immersive: Day
+							9</h2 class="intro">
+					</figure>
+
+					<h4>Agenda</h4><br>
+					<ul>
+						<li>Setup Github(The right way) and webhosting</li>
+						<li>VS code ticks and tips w Live Server</li>
+						<li>Aframe Tricks and Tips</li>
+						<li>Export from Aframe to Blender</li>
+						<li>Final showcase discussion and design activity</li>
+					</ul>
+				</section>
+				<section><img src="img/ghdesktop.jpg" height="500"><br>Github Desktop <a href="https://desktop.github.com/">Download</a></section>
+				<section><img src="img/vscode.png" height="450"><br>Visual Studio Code Tricks and tips</section>
+				<section><img src="img/glanim.png" height="450"><br>Working with Animated GLTF files</section>
+				<section><a href="https://github.com/n5ro/aframe-extras">A-Frame Extras</a></section>
+				<section>Basic Animations in Blender</section>
+				<section><img src="img/mixamo.png" height="450"><br>Mixamo</section>
+				<section><a href="https://substance3d.adobe.com/plugins/mixamo-in-blender">Mixamo Plugin For Blender</a></section>
+				<section><a href="https://substance3d.adobe.com/magazine/the-substance-3d-add-on-for-blender-is-here/">Substance Plugin For Blender</a></section>
+				<section>Baking a Physics Animation</section>
+				<section>Exporting from A-frame to Blender</section>
+				<section>Very Basic Intro To Geometry Nodes in Blender</section>
+				<section><a href="https://miro.com/welcomeonboard/TjJGU0NKY0N6UFp5N25ZNGFCNVNvODlZa09lanpDQkd1VWxGV3h4Mmp6bTJDcko4SzdwZWY3dllaSUlSRGRDdHwzMDc0NDU3MzU1NjA0MjYwOTMyfDI=?share_link_id=909321753255">Lets' start planning and building for the Final Show!</a></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+	
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+	
+				// Optional reveal.js plugins
+				dependencies: [{
+					src: 'lib/js/classList.js',
+					condition: function() {
+						return !document.body.classList;
+					}
+				}, {
+					src: 'plugin/markdown/marked.js',
+					condition: function() {
+						return !!document.querySelector('[data-markdown]');
+					}
+				}, {
+					src: 'plugin/markdown/markdown.js',
+					condition: function() {
+						return !!document.querySelector('[data-markdown]');
+					}
+				}, {
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					condition: function() {
+						return !!document.querySelector('pre code');
+					},
+					callback: function() {
+						hljs.initHighlightingOnLoad();
+					}
+				}, {
+					src: 'plugin/zoom-js/zoom.js',
+					async: true
+				}, {
+					src: 'plugin/notes/notes.js',
+					async: true
+				}]
+			});
+		</script>
+	</body>
+</html>

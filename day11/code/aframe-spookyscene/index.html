@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js">
+    </script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-randomizer-components@3.0.2/dist/aframe-randomizer-components.min.js">
+    </script>
+    <script
+        src="https://unpkg.com/aframe-entity-generator-component@3.0.1/dist/aframe-entity-generator-component.min.js">
+    </script>
+    <script>
+        AFRAME.registerComponent('random-material', {
+            init: function () {
+                this.el.setAttribute('material', {
+                    color: this.getRandomColor(),
+                    metalness: Math.random(),
+                    roughness: Math.random()
+                });
+            },
+            getRandomColor: function () {
+                var letters = '0123456789ABCDEF'.split('');
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        });
+        AFRAME.registerComponent('random-torus-knot', {
+            init: function () {
+                this.el.setAttribute('geometry', {
+                    primitive: 'torusKnot',
+                    radius: Math.random() * 6,
+                    radiusTubular: Math.random() * .5,
+                    p: Math.round(Math.random() * 10),
+                    q: Math.round(Math.random() * 10)
+                });
+                this.el.setAttribute('animation__yoyo',
+                    `property: rotation; dir: alternate; dur: 10000; yoyo: easeInOutSine; loop: true; to: 360 360 360`
+                );
+
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-mixin id=" teleport" teleport-controls="type: parabolic; cameraRig: #cameraRig; defaultPlaneSize: 1000;">
+            </a-mixin>
+            <a-mixin id="light" geometry="primitive: sphere; radius: 1.5" material="color: #FFF; shader: flat"
+                light="color: #DDDDFF; distance: 120; intensity: 1ß; type: point"></a-mixin>
+            <a-mixin id="torusKnot" random-torus-knot random-material random-position="min: -40 8 -40; max: 40 40 40">
+            </a-mixin>
+            <audio id="atmos" src="assets/sound/48411__luftrum__forestsurroundings.mp3" preload="auto"></audio>
+            <audio id="grave" src="assets/sound/169975__klankbeeld__horror-ghost-22.wav" preload="auto"></audio>
+
+
+        </a-assets>
+
+        <a-entity sound="src: #atmos; autoplay: true"></a-entity>
+        <!-- Use entity-generator component to generate 120 entities with the torusKnot mixin. -->
+        <a-entity entity-generator="mixin: torusKnot; num: 15></a-entity>
+            <!-- Lights. -->
+            <a-entity animation=" property: rotation; to: 0 0 360; dur: 4000; easing: linear; loop: true">
+            <a-entity mixin="light" position="30 0 0"></a-entity>
+        </a-entity>
+
+        <a-entity animation="property: rotation; to: 360 0 0; dur: 4000; easing: linear; loop: true">
+            <a-entity mixin="light" position="0 0 40"></a-entity>
+        </a-entity>
+
+        <a-asset-item id="stand" src="assets/models/Stand_out/Stand.gltf" position="0 -1 0"></a-asset-item>
+        <a-asset-item id="hallway" src="assets/models/gumusler_monastery/scene.gltf" scale="0.2 0.2 0.2"
+            position="0 -1 0">
+        </a-asset-item>
+        <!-- <audio id="magic" src="assets/sound/magic.mp3" preload="auto"></audio> -->
+        </a-assets>
+
+
+        <!-- create default environment -->
+        <!-- <a-entity class="environment" position="0 50 0"
+            light="type: hemisphere; color: #91dacf; intensity: 0.6; groundColor: #00df00" visible=""></a-entity> -->
+        <a-entity environment="preset: forest;fog: 0.7"></a-entity>
+
+        <a-gltf-model src="#stand" scale="2 2 2" position="0 0 -3" animation-mixer="">
+            <a-entity sound="src: #grave; autoplay: true; loop: true"></a-entity>
+            <!-- <a-sound src="assets/sound/magic.mp3" autoplay="true" sound=""></a-sound> -->
+        </a-gltf-model>
+        <a-gltf-model src="#hallway" scale="1 1 1" position="0 0 7" animation-mixer>
+            <a-entity id="cameraRig" position="0 0.1 0">
+                <a-entity camera wasd-controls look-controls></a-entity>
+                <a-entity id="rightHand" mixin="teleport" laser-controls="hand: right"
+                    windows-motion-controls="hand: right" oculus-go-controls="hand: right">
+                    <a-entity id="leftHand" mixin="teleport" laser-controls="hand: left"
+                        windows-motion-controls="hand: left" oculus-go-controls="hand: left">
+                    </a-entity>
+                </a-entity>
+
+    </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+{
+    "asset": {
+        "generator": "FBX2glTF",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "buffers": [
+        {
+            "byteLength": 14536,
+            "uri": "buffer.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 792,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 2808,
+            "byteOffset": 792,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 2808,
+            "byteOffset": 3600,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1872,
+            "byteOffset": 6408,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1872,
+            "byteOffset": 8280,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 3744,
+            "byteOffset": 10152,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 640,
+            "byteOffset": 13896
+        }
+    ],
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "componentType": 5123,
+            "type": "SCALAR",
+            "count": 396,
+            "bufferView": 0,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 234,
+            "bufferView": 1,
+            "byteOffset": 0,
+            "min": [
+                -0.0169820431619883,
+                -0.0266981236636639,
+                -0.0147068928927183
+            ],
+            "max": [
+                0.0169820431619883,
+                0.00999999977648258,
+                0.0147068928927183
+            ]
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC3",
+            "count": 234,
+            "bufferView": 2,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC2",
+            "count": 234,
+            "bufferView": 3,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5123,
+            "type": "VEC4",
+            "count": 234,
+            "bufferView": 4,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "VEC4",
+            "count": 234,
+            "bufferView": 5,
+            "byteOffset": 0
+        },
+        {
+            "componentType": 5126,
+            "type": "MAT4",
+            "count": 10,
+            "bufferView": 6,
+            "byteOffset": 0
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "materials": [
+        {
+            "name": "lambert1",
+            "alphaMode": "OPAQUE",
+            "extras": {
+                "fromFBX": {
+                    "shadingModel": "Lambert",
+                    "isTruePBR": false
+                }
+            },
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.400000005960464,
+                    0.400000005960464,
+                    0.400000005960464,
+                    1.0
+                ],
+                "metallicFactor": 0.200000002980232,
+                "roughnessFactor": 0.800000011920929
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "pSphere1",
+            "primitives": [
+                {
+                    "material": 0,
+                    "mode": 4,
+                    "attributes": {
+                        "JOINTS_0": 4,
+                        "NORMAL": 2,
+                        "POSITION": 1,
+                        "TEXCOORD_0": 3,
+                        "WEIGHTS_0": 5
+                    },
+                    "indices": 0
+                }
+            ]
+        }
+    ],
+    "skins": [
+        {
+            "joints": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "inverseBindMatrices": 6,
+            "skeleton": 2
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                1,
+                2
+            ]
+        },
+        {
+            "name": "pSphere1",
+            "translation": [
+                0.0,
+                0.02989836409688,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mesh": 0,
+            "skin": 0
+        },
+        {
+            "name": "joint1",
+            "translation": [
+                -0.000429927778895944,
+                0.029561361297965,
+                0.0
+            ],
+            "rotation": [
+                -0.449529230594635,
+                0.893265604972839,
+                8.22224741892651e-17,
+                2.7171017002905e-17
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                3,
+                6,
+                9
+            ]
+        },
+        {
+            "name": "joint2",
+            "translation": [
+                0.00829771719872952,
+                0.0,
+                -0.00338368862867355
+            ],
+            "rotation": [
+                1.13115249985736e-33,
+                1.87097969771652e-32,
+                -0.223625838756561,
+                0.974675059318542
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                4
+            ]
+        },
+        {
+            "name": "joint3",
+            "translation": [
+                0.00941705051809549,
+                0.000760872266255319,
+                -0.000819872599095106
+            ],
+            "rotation": [
+                0.975270569324493,
+                -0.221014365553856,
+                -5.08052710956069e-17,
+                5.12715627330704e-17
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                5
+            ]
+        },
+        {
+            "name": "joint4",
+            "translation": [
+                0.00868221465498209,
+                0.000261715002125129,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.610087215900421,
+                0.792334258556366
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "name": "joint5",
+            "translation": [
+                0.00245311693288386,
+                -0.00877942983061075,
+                -0.00280938716605306
+            ],
+            "rotation": [
+                0.914366543292999,
+                -0.404887408018112,
+                -2.47922027255189e-17,
+                5.59888050216153e-17
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                7
+            ]
+        },
+        {
+            "name": "joint6",
+            "translation": [
+                0.00941871199756861,
+                0.00010930337884929,
+                1.11022299980974e-18
+            ],
+            "rotation": [
+                0.982584774494171,
+                -0.185814782977104,
+                2.0566353697306e-17,
+                6.62068811016992e-17
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                8
+            ]
+        },
+        {
+            "name": "joint7",
+            "translation": [
+                0.00666214618831873,
+                0.0,
+                -5.55111499904869e-19
+            ],
+            "rotation": [
+                1.4642038449079e-32,
+                1.21735407199705e-32,
+                0.227933377027512,
+                0.973676741123199
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "name": "joint8",
+            "translation": [
+                0.00597547041252255,
+                -0.00403191102668643,
+                0.00683623366057873
+            ],
+            "rotation": [
+                0.93732088804245,
+                -0.348467439413071,
+                -6.47930838510583e-17,
+                4.12388743718719e-17
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                10
+            ]
+        },
+        {
+            "name": "joint9",
+            "translation": [
+                0.00914144236594439,
+                8.08332915767096e-05,
+                -0.00263821636326611
+            ],
+            "rotation": [
+                -1.17965569265969e-33,
+                -4.6090116610928e-17,
+                -0.00632549915462732,
+                0.999979972839355
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "children": [
+                11
+            ]
+        },
+        {
+            "name": "joint10",
+            "translation": [
+                0.00882988888770342,
+                -6.85562725646968e-17,
+                0.00249368837103248
+            ],
+            "rotation": [
+                0.939506351947784,
+                -0.342531442642212,
+                2.09740015380619e-17,
+                -5.75281749066867e-17
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        }
+    ]
+}
