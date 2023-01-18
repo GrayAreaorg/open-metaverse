@@ -1,0 +1,14 @@
+<model-viewer src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" environment-image="spruit_sunrise_1k_HDR.hdr" skybox-image="spruit_sunrise_1k_HDR.hdr">
+    <button class="Hotspot" slot="hotspot-2" data-position="-0.38820222423970474m 0.3587860254865143m -0.19497150869566615m" data-normal="-0.7795974874829987m -0.4191877330109025m -0.46530570811389826m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Mark's Plant</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
